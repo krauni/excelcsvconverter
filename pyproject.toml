@@ -1,5 +1,5 @@
 [project]
-name = "excel_csv_decimal_converter"
+name = "excelcsvformatconverter"
 version = "0.1.0"
 description = "Converter to convert a Picoscope generated csv file to a excel compatible one."
 authors = [
