@@ -1,6 +1,6 @@
 [project]
 name = "excelcsvformatconverter"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Converter to convert a Picoscope generated csv file to a excel compatible one."
 authors = [
     {name = "Nils Krause", email = "github@nils.online"},
@@ -10,17 +10,25 @@ requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}
 
-[build-system]
-requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.build_meta"
+[project.urls]
+Homepage = "https://github.com/krauni/excelcsvconverter"
 
 [project.scripts]
 csvconverter_cmd = "excel_csv_decimal_converter_nikrapy.csvdecimalconverter:main"
 csvconverter = "excel_csv_decimal_converter_nikrapy.csvconvertergui:gui_main"
 
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.pdm]
 distribution = true
 
-[project.urls]
-Homepage = "https://github.com/krauni/excelcsvconverter"
+[tool.pdm.version]
+source = "scm"
+fallback_version = "0.0.0"
+
+
+[tool.ruff]
+exclude = [".venv"]
+target-version = "py39"
