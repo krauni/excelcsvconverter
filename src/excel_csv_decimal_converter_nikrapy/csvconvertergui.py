@@ -9,8 +9,8 @@ from excel_csv_decimal_converter_nikrapy import csvdecimalconverter
 class MyApp:
 
     def __init__(self, parent):
-        self.src_folder: Path = Path()
-        self.dst_folder: Path = Path()
+        self.src_folder: Path = Path.home()
+        self.dst_folder: Path = Path.home()
 
         self.frm = tkinter.Frame(parent, padx=10, pady=10)
         self.frm.grid()
@@ -47,7 +47,7 @@ class MyApp:
 
 def gui_main():
     tk = tkinter.Tk()
-    myapp = MyApp(tk)
+    myapp = MyApp("CSV converter")
     tk.mainloop()
 
 

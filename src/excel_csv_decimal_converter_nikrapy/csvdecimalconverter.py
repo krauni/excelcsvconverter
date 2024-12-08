@@ -17,6 +17,7 @@ def main():
 
 
 def convert_files_in_dir(source: Path, dst: Path):
+    dst.mkdir(exist_ok=True)
     for src_file in source.iterdir():
         basename = Path(src_file).name
         dst_file = dst.joinpath(basename)
