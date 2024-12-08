@@ -1,7 +1,5 @@
 import argparse
-import tkinter as tk
 from pathlib import Path
-from tkinter import filedialog
 
 
 def main():
@@ -13,12 +11,12 @@ def main():
     source: Path = parsed_args.source
     dst: Path = parsed_args.destination
     if source.is_dir() and dst.is_dir():
-        convert_files_in_dir( source, dst)
+        convert_files_in_dir(source, dst)
     else:
         convert_csv_format(source, dst)
 
 
-def convert_files_in_dir(source:Path, dst:Path):
+def convert_files_in_dir(source: Path, dst: Path):
     for src_file in source.iterdir():
         basename = Path(src_file).name
         dst_file = dst.joinpath(basename)
@@ -32,7 +30,6 @@ def convert_csv_format(src_path: Path, dst_path: Path):
                 line = line.replace(",", ";")
                 line = line.replace(".", ",")
                 outfile.write(line)
-
 
 
 if __name__ == "__main__":
