@@ -15,9 +15,12 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
-csvconverter_cmd = "excel_csv_decimal_converter.csvdecimalconverter:main"
-csvconverter = "excel_csv_decimal_converter.csvconvertergui:gui_main"
+csvconverter_cmd = "excel_csv_decimal_converter_nikrapy.csvdecimalconverter:main"
+csvconverter = "excel_csv_decimal_converter_nikrapy.csvconvertergui:gui_main"
 
 
 [tool.pdm]
 distribution = true
+
+[project.urls]
+Homepage = "https://github.com/krauni/excelcsvconverter"

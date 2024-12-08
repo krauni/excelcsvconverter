@@ -3,7 +3,7 @@ from pathlib import Path
 from tkinter import filedialog
 from tkinter.constants import BOTTOM, RIDGE, TOP
 
-from excel_csv_decimal_converter import csvdecimalconverter
+from excel_csv_decimal_converter_nikrapy import csvdecimalconverter
 
 
 class MyApp:

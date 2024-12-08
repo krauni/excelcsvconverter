@@ -36,5 +36,4 @@ def convert_csv_format(src_path: Path, dst_path: Path):
 
 
 if __name__ == "__main__":
-    gui_main()
-    # main()
+    main()
